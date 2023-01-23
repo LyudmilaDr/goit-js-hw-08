@@ -7,7 +7,7 @@ let dataForm = { email: `${form.elements.email.value }`,
 message: `${form.elements.message.value}`
 };
 
-form.addEventListener("input", lodash(onFormInput, 500));
+form.addEventListener("input", throttle(onFormInput, 500));
 form.addEventListener("submit", onFormSubmit);
 
 function onFormInput(){
