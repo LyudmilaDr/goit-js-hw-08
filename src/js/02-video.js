@@ -14,17 +14,7 @@ function onTimeUpdate(event){
 const timelyUpdate = JSON.parse(localStorage.getItem(KEY_LOCAL));
 
 if(timelyUpdate){
-    player.setCurrentTime(timelyUpdate || 0.1).then(function(seconds) {
-        console.log(seconds); 
-    }).catch(function(error) {
-        switch (error.name) {
-            case 'RangeError':
-                break;
-    
-            default:
-                break;
-        }
-    }); 
+    player.setCurrentTime(timelyUpdate || 0.1);
     // console.log(KEY_LOCAL)  
 }
 
