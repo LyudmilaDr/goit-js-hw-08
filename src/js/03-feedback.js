@@ -31,7 +31,7 @@ const formData = new FormData(form);
 formData.forEach((value, name) => (dataObject[name] = value));
 console.log( dataObject );
 localStorage.removeItem(KEY_LOCAL);
-evt.currentTarget.reset();
+event.currentTarget.reset();
 };
 
 
